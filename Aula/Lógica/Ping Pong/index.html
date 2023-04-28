@@ -13,16 +13,16 @@
             }
             </style>
     </head>
+
     <body>
         <canvas></canvas>
         <script>
         const canvasEl = document.querySelector("canvas"),
             canvasCtx = canvasEl.getContext("2d"),
-            gapX = 10
+            gapX = 10,
+            lineWidth = 15,
+            mouse={x: 0, y: 0}
 
-        const lineWidth = 15
-
-        const mouse={x: 0, y: 0}
         const field = {
             w: window.innerWidth,
             h: window.innerHeight,
@@ -32,6 +32,7 @@
                 canvasCtx.fillRect(0, 0, this.w, this.h)
             },
         }
+,
 
         const line = {
             w: 15,
